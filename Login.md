@@ -63,7 +63,7 @@ The Client Must respond with <br>
     </tr>
     <tr>
         <td>{network ID}</td>
-        <td>VID/CID</td>
+        <td>CID</td>
     </tr>
     <tr>
         <td>{num}</td>
@@ -94,5 +94,5 @@ The Client Must respond with <br>
     </tr>
 </table>
 
-Once that handshake is complete, VRC/Euroscope will 
+Once that handshake is complete, The client will
 [add a client.](addclient.md)
