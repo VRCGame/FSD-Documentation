@@ -2,87 +2,35 @@
 ## Adding ATC Clients
 Euroscope and VRC will add ATC Clients (Even Observers) as shown \
 `$AA{Callsign}:SERVER:{Full Name}:{Network ID}:{Password}:{Rating?}:{Protocol Version}`
-<table>
-    <tr>
-        <th>Element</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>$AA</td>
-        <td>Command: Add ATC Client</td>
-    </tr>
-    <tr>
-        <td>{Callsign}</td>
-        <td>From: Callsign of the Client</td>
-    </tr>
-    <tr>
-        <td>SERVER</td>
-        <td>To: 'SERVER'</td>
-    </tr>
-    <tr>
-        <td>{Full Name}</td>
-        <td>Full Name of the Controller</td>
-    </tr>
-    <tr>
-        <td>{Network ID}</td>
-        <td>VID/CID</td>
-    </tr>
-    <tr>
-        <td>{Password}</td>
-        <td>Password for the CID/VID</td>
-    </tr>
-    <tr>
-        <td>{Rating?}</td>
-        <td>Possibly ATC Rating, Unsure of real meaning</td>
-    </tr>
-    <tr>
-        <td>{Protocol Version}</td>
-        <td>Protocol Version</td>
-    </tr>
-</table>
+
+| Element       | Description                   |
+| -------       | -----------                   |
+| $AA           | Command: Add ATC Client       |
+| {Callsign}    | From: Callsign of the Client  |
+| SERVER        | To: 'SERVER'                  |
+| {Full Name}   | Full Name of the Controller   |
+| {Network ID}  | CID                           |
+| {Password}    | Password                      |
+| {Rating?}     | Int from 1-12, Possibly Rating|
+| {Protocol Version} | Protocol Version         |
 
 ## Adding Pilot Clients
 vPilot, xPilot, and Swift add clients a similar way \
 `$AP{Callsign}:SERVER:{Network ID}:{Password}:{Pilot Rating?}:{Protocol Version}:{Unknown}:{Full Name ICAO}`
 
-<table>
-    <tr>
-        <th>Element</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>$AP</td>
-        <td>Command: Add Pilot Client</td>
-    </tr>
-    <tr>
-        <td>{Callsign}</td>
-        <td>From: Callsign of the Client</td>
-    </tr>
-    <tr>
-        <td>SERVER</td>
-        <td>To: 'SERVER'</td>
-    </tr>
-    <tr>
-        <td>{Network ID}</td>
-        <td>VID/CID</td>
-    </tr>
-    <tr>
-        <td>{Password}</td>
-        <td>Password for the CID/VID</td>
-    </tr>
-    <tr>
-        <td>{Pilot Rating?}</td>
-        <td>Possibly Pilot Rating, unsure</td>
-    </tr>
-    <tr>
-        <td>{Protocol Version}</td>
-        <td>Protocol Version</td>
-    </tr>
-    <tr>
-        <td>{Unknown}</td>
-        <td>Unknown what this value does</td>
-    </tr>
-    <tr>
-        <td>{Full Name ICAO}</td>
-        <td>Full Name of the Pilot + Home Airport</td>
-</table>
+| Element           | Description                       |
+| -------           | -----------                       |
+| $AP               | Command: Add Pilot Client         |
+| {Callsign}        | From: Callsign of the Client      |
+| SERVER            | To: 'SERVER'                      |
+| {Network ID}      | CID                               |
+| {Password}        | Password                          |
+| {Pilot Rating?}   | Int from 1-12, Possibly Rating    |
+| {Protocol Version}| Protocol Version                  |
+| {Unknown}         | Unknown                           |
+| {Full Name ICAO}  | Full Name of the Pilot + Home apt |
+
+
+## Footnote
+It appears that `#AA` and `#AP` go to every connected client \
+For our application, we would call an `#AA` function for every controller within a scenario and `#AP` for every pilot within a scenario. 

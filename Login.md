@@ -26,7 +26,7 @@ When a Client opens a TCP Connection on port 6809, the server is expected to ide
     </tr>
 </table>
 
-The Client Must respond with <br>
+The Client Must respond with \
 `$ID{Callsign}:SERVER:{client id}:{client string}:3:2:{network ID}:{num}`
 <table>
     <tr>
@@ -70,7 +70,8 @@ The Client Must respond with <br>
         <td>Signed 9 Digit Int</td>
     </tr>
 </table>
-<h2> Client Codes </h2>
+
+## Client Codes 
 <table>
     <tr>
         <th>Code</th>
