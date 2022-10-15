@@ -32,8 +32,8 @@ vPilot, xPilot, and Swift add clients a similar way \
 
 
 ## Footnote
-~~It appears that `#AA` and `#AP` go to every connected client \
-For our application, we would call an `#AA` function for every controller within a scenario and `#AP` for every pilot within a scenario. ~~
+~~It appears that `#AA` and `#AP` go to every connected client~~ \
+~~For our application, we would call an `#AA` function for every controller within a scenario and `#AP` for every pilot within a scenario.~~
 
 Looking at wireshark while using the Euroscope Simulator Server, it Appears simulating a `JAX_GND`, it sends `$CRSERVER:ZJX_SV_OBS:ATC:Y:JAX_GND` then `#PCZJX_SV_OBS:JAX_GND:CCP:DI`
 
